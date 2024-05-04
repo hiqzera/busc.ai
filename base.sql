@@ -66,14 +66,14 @@ INSERT INTO `login` (`id_log`, `nome_log`, `user_log`, `pw_log`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `registro`
+-- Estrutura para tabela `pf_registro`
 --
 
-CREATE TABLE `registro` (
+CREATE TABLE `pf_registro` (
   `id` int(11) NOT NULL,
   `user_log` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `cpf` varchar(14) NOT NULL,
+  `cpf_registro` varchar(14) NOT NULL,
   `pw_log` varchar(45) NOT NULL,
   `telefone` varchar(14) NOT NULL,
   `genero` varchar(10) NOT NULL,
@@ -81,10 +81,28 @@ CREATE TABLE `registro` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `registro`
+-- Despejando dados para a tabela `pf_registro`
 --
 
-INSERT INTO `registro` (`id`, `user_log`, `email`, `cpf`, `pw_log`, `telefone`, `genero`, `data_nascimento`) VALUES
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `pf_registro`
+--
+
+-- Adicionando tabela para Pessoa Jurídica (PJ)
+CREATE TABLE `pj_registro` (
+  `id_pj` int(11) NOT NULL AUTO_INCREMENT,
+  `nome_empresa` varchar(100) NOT NULL,
+  `cnpj` varchar(18) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `telefone` varchar(14) NOT NULL,
+  `tipo_servico` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_pj`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+INSERT INTO `pf_registro` (`id`, `user_log`, `email`, `cpf`, `pw_log`, `telefone`, `genero`, `data_nascimento`) VALUES
 (1, 'lucas', 'pedro@gmail.com', '12312312312', '$2y$10$1YoP2iuaLtn7kEPRfsqhbuW8AO6FzdLUbS6UJv', '41-9 9999-9999', 'homem', '2000-12-10'),
 (2, 'joao ', 'joao.contato@gmail.com', '00000000000', '$2y$10$3N1gx1SIhEqwp63yc5Imk.8XI3OaelpL5ev6tp', '41-9 9999-9999', 'homem', '2000-12-10'),
 (3, 'lucas10', 'lucas.contato@gmail.com', '00000000000', '$2y$10$WaVCmRKEpoa6hmKv50kkHusYX7IAD2Us7BGU5E', '41-9 9999-9999', 'homem', '2000-12-10');
@@ -106,9 +124,9 @@ ALTER TABLE `login`
   ADD PRIMARY KEY (`id_log`);
 
 --
--- Índices de tabela `registro`
+-- Índices de tabela `pf_registro`
 --
-ALTER TABLE `registro`
+ALTER TABLE `pf_registro`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -128,9 +146,9 @@ ALTER TABLE `login`
   MODIFY `id_log` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de tabela `registro`
+-- AUTO_INCREMENT de tabela `pf_registro`
 --
-ALTER TABLE `registro`
+ALTER TABLE `pf_registro`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 .cabecalho-logado {
     width: 100%;
     display: flex;
@@ -39,7 +41,6 @@
 }
 
 .map {
-    margin-top: 35rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,10 +50,9 @@
 .map-box {
     border-radius: 1rem;
     width: 95%;
-    height: 45vh;
     max-width: 100%;
     overflow: hidden;
-    margin-bottom: 3rem;
+    margin-bottom: 1%;
     border: 0;
 }
 
@@ -84,18 +84,29 @@
 #resultados {
     padding: 1rem;
     background-color: #dddddd;
-    margin-top: 3rem;
     margin-left: 7rem;
-    width: 90%;
+    width: 80%;
     height: auto;
     border: #333 5px;
     border-radius: 1rem;
     cursor: pointer;
     position: absolute;
+    top: 10rem; /* ou */
 }
 
 #resultados div {
-    margin-bottom: 10px;
+    margin-top: auto;
+}
+
+#localSelecionado {
+    display: none;
+    background-color: #f2f2f2;
+    padding: 10px 0 ;
+    
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 999;
 }
 
 #infos-empresa {

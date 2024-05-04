@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     <link rel="stylesheet" href="form.css" />
-    <title>Projeto Integrador</title>
+    <link rel="shortcut icon" type="imagex/jpg" href="img/logo_nova.jpg">
+    <title>Busc.ai</title>
 </head>
 
 <body>
 
     <div class="form-container">
-        <div id="imagem-log"><img src="img/logotipo.menor.jpeg" alt=""></div>
+        <div id="imagem-log"><img src="img/logo_nova.jpg" width="80%" alt=""></div>
         <div>
-            <h3>Agend.ai</h3>
+            <h3 class="tittle">Busc.ai</h3>
         </div>
 
         <form action="index.php" method="post">
@@ -72,7 +75,10 @@
                 <p>Esqueci minha senha</p>
             </a>
             <a href="cadastro_pf.html">
-                <p>Cadastre</p>
+                <p>Cadastre como Cliente</p>
+            </a>
+            <a href="cadastro_pj.html">
+                <p>Cadastre como Empresa</p>
             </a>
         </div>
     </div>

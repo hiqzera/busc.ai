@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="shortcut icon" type="imagex/jpg" href="img/logo_nova.jpg">
+    <title>Cadastro Pessoa Jurídica</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="container" style="margin: 5rem auto;">
+            <img src="img/logo_nova.jpg" alt="" class="logo">
+            <h1 class="tittle">Busc.ai</h1>
+            <form method="post" action="processar_cadastro_pj.php"> <!-- Ajuste o action para apontar para o script PHP de processamento -->
+                <label for="nome_empresa">Nome da Empresa:</label>
+                <input type="text" name="nome_empresa" required placeholder="Nome da Empresa">
+    
+                <label for="telefone">Telefone:</label>
+                <input type="text" name="telefone" required placeholder="Telefone">
+    
+                <label for="endereco">Endereço:</label> <!-- Adicione um campo para o endereço -->
+                <input type="text" name="endereco" required placeholder="Endereço">
+    
+                <label for="horario_funcionamento">Horário de Funcionamento:</label> <!-- Adicione um campo para o horário de funcionamento -->
+                <input type="text" name="horario_funcionamento" required placeholder="Horário de Funcionamento">
+    
+                <input type="submit" value="Cadastrar">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

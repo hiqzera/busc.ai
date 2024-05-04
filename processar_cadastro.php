@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", $usuario, $senha);
                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                $sql = "INSERT INTO registro (user_log, email, cpf, pw_log, telefone, genero, data_nascimento) VALUES (?, ?, ?, ?, ?, ?, ?)";
+                $sql = "INSERT INTO pf_registro (user_log, email, cpf, pw_log, telefone, genero, data_nascimento) VALUES (?, ?, ?, ?, ?, ?, ?)";
                 $stmt = $pdo->prepare($sql);
 
                 $executeSuccess = $stmt->execute([$user, $email, $cpf, $passwordHash, $telefone, $genero, $data]);
